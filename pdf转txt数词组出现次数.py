@@ -9,7 +9,7 @@ from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from cStringIO import StringIO
 
-#convert pdf to text
+#convert pdf to text， extract from PDFminer, ignoring everything but english words
 def pdf_to_text(root):
     # PDFMiner boilerplate
     rsrcmgr = PDFResourceManager()
@@ -35,6 +35,7 @@ def pdf_to_text(root):
 def words_count(text, root):
     count = 0
     count = len(re.findall(r'[M|m]ergers and [A|a]cquisitions', text)) + len(re.findall(r'M&A', text))
+    #there are many way to use regular expression, re.search and re.match will returen a value as soon as it finds one
     if count == 0:
         os.remove(root) 
     return count
