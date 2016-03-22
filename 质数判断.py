@@ -28,12 +28,12 @@ def isprime(x):
             return False
     return True
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     flag = 'y'
     while(flag == 'y'):
         num = input("Please input a number:")
         for i in range(2,num):
-            if ________ and num % i == 0:
+            if isprime(i) and num % i == 0:
                 print i,
-        flag = raw_input("\nIf you want to input another number,\
-        input y please or input n.")
+        flag = raw_input("\nIf you want to input another number, \
+                         input y. Else input n.")
