@@ -36,4 +36,4 @@ if __name__ == "__main__":
             if isprime(i) and num % i == 0:
                 print i,
         flag = raw_input("\nIf you want to input another number, \
-                         input y. Else input n.")
+input y. Else input n.") #在引号内换行要顶格，不然空格也是字符串输出
