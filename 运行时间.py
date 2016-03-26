@@ -3,3 +3,6 @@ import time
     #run code 
     end = time.clock() 
 print end-start
+
+from datetime import datetime
+print datetime.now()
